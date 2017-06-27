@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NexmoRailsQuickstart</title>
+    <title>Nexmo Rails Quickstart</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="container">
+      <% if !flash.keys.empty? %>
+        <% flash.keys.each do |key| %>
+          <div id='flash_<%= key %>'>
+            <%= flash[key] %>
+          </div>
+        <% end %>
+      <% end %>
+      
+      <%= yield %>
+    </div>
   </body>
 </html>

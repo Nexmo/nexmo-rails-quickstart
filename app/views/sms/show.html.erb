@@ -1,0 +1,19 @@
+<h1>Send an SMS</h1>
+
+<%= form_for @sms, url: :sms do |f| %>
+  <div class="field">
+    <%= f.label :from, "Sender's phone number or name" %>
+    <%= f.text_field :from, placeholder: '+12223334555 or "John"' %>
+  </div>
+  <div class="field">
+    <%= f.label :to, "Recipient's phone number or name" %>
+    <%= f.text_field :to, placeholder: '+12223334555' %>
+  </div>
+  <div class="field">
+    <%= f.label :text, "Message" %>
+    <%= f.text_area :text %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Send" %>
+  </div>
+<% end %>
