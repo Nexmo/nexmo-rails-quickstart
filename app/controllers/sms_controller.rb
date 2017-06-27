@@ -1,6 +1,6 @@
 class SmsController < ApplicationController
 
-  # Show the UI for sending an SMS
+  # Shows the UI for sending an SMS
   def show
     @sms = Sms.new
   end
@@ -11,10 +11,10 @@ class SmsController < ApplicationController
     @sms = Sms.new(safe_params)
 
     if @sms.save
-      start_delivery_of @sms
+      deliver @sms
       redirect_to :sms, notice: 'SMS Sent'
     else
-      flash[:alert] = 'Something is missing'
+      flash[:alert] = 'Something went wrong'
       render :show
     end
   end
@@ -29,13 +29,15 @@ class SmsController < ApplicationController
     client = Nexmo::Client.new
   end
 
-  # The params that can be stored in the database safely
+  # Determines the params that can be
+  # stored in the database safely
   def safe_params
     params.require(:sms).permit(:to, :from, :text)
   end
 
-  # Use the Nexmo API to send the SMS message
-  def start_delivery_of sms
+  # Uses the Nexmo API to send the stored
+  # SMS message
+  def deliver sms
     response = nexmo.send_message(
       from: sms.from,
       to: sms.to,
@@ -46,8 +48,7 @@ class SmsController < ApplicationController
     # the message ID on the SMS record
     if response['messages'].first['status'] == '0'
       sms.update_attributes(
-        message_id: response['messages'].first['message-id'],
-        delivery_started_at: Time.now
+        message_id: response['messages'].first['message-id']
       )
     end
   end
