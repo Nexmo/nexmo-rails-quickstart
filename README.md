@@ -13,18 +13,18 @@ For some of the examples you will need to [buy a number](https://dashboard.nexmo
 ### SMS
 
 Tutorial                                                       | Code Sample
--------------------------------------------------------------- | ----------------------------------------------------------------------------------
+-------------------------------------------------------------- | ------------------------------------------------------------------------------------------
 [How to Send SMS Messages with Ruby on Rails](#)               | [outbound_sms_controller.rb](app/controllers/outbound_sms_controller.rb)
 [How to Receive SMS Messages with Ruby on Rails](#)            | [inbound_sms_controller.rb](app/controllers/inbound_sms_controller.rb)
-[How to receive an SMS Delivery Receipt with Ruby on Rails](#) | [delivery_receipts_controller.rb](app/controllers/delivery_receipts_controller.rb)
+[How to receive an SMS Delivery Receipt with Ruby on Rails](#) | [sms_delivery_receipts_controller.rb](app/controllers/sms_delivery_receipts_controller.rb)
 
 ### Voice
 
 Tutorial                                                          | Code Sample
------------------------------------------------------------------ | --------------------------------------------------------------------------------------------
+----------------------------------------------------------------- | ----------------------------------------------------------------------------
 [How to Make an Outbound Text-to-Speech Phone Call with Rails](#) | [outbound_calls_controller.rb](app/controllers/outbound_calls_controller.rb)
-[How to receive an Call Event webhook with Ruby on Rails](#)      | [outbound_call_webhooks_controller.rb](app/controllers/outbound_call_webhooks_controller.rb)
-[How to Handle Inbound Phone Calls with Ruby on Rails](#)         | [inbound_call_controller.rb](app/controllers/inbound_call_controller.rb)
+[How to receive an Call Event webhook with Ruby on Rails](#)      | [call_events_controller.rb](app/controllers/call_events_controller.rb)
+[How to Handle Inbound Phone Calls with Ruby on Rails](#)         | [inbound_calls_controller.rb](app/controllers/inbound_calls_controller.rb)
 
 ## Request More Examples
 

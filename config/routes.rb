@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :inbound_sms,           only: [:create]
 
   # Phone Call routes
-  resources :outbound_calls,         only: [:index, :create, :show]
-  resources :outbound_call_webhooks, only: [:create]
+  resources :outbound_calls, only: [:index, :create, :show]
+  resources :call_events,    only: [:create]
+  resources :inbound_calls,  only: [:create]
 end
