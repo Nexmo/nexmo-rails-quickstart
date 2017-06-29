@@ -1,4 +1,5 @@
 class SmsDeliveryReceiptsController < ApplicationController
+  # We disable CSRF for this webhook call
   skip_before_action :verify_authenticity_token
 
   # Updates an SMS message's status when a valid

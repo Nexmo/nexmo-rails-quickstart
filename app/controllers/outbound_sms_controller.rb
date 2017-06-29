@@ -1,7 +1,7 @@
 class OutboundSmsController < ApplicationController
 
   # Shows the UI for sending an SMS
-  def show
+  def index
     @sms = Sms.new
   end
 
