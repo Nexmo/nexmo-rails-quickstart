@@ -20,19 +20,11 @@ Tutorial                                                       | Code Sample
 
 ### Voice
 
-Tutorial                                                                       | Code Sample
------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------
-[How to Make an Outbound Text-to-Speech Phone Call with Ruby on Rails](#)      | [outbound_call_controller.rb](app/controllers/outbound_call_controller.rb)
-[How to Handle Inbound Phone Calls with Ruby on Rails](#)                      | [inbound_call_controller.rb](app/controllers/inbound_call_controller.rb)
-[How to Direct Inbound Phone Calls to an Endpoint with Failover with Rails](#) | [direct_inbound_call_controller.rb](app/controllers/direct_inbound_call_controller.rb)
-[How to Record Audio from Incoming Calls with Ruby on Rails](#)                | [record_inbound_call_controller.rb](app/controllers/record_inbound_call_controller.rb)
-[How to Make a Private Phone Call with Ruby on Rails](#)                       | [private_call_controller.rb](app/controllers/private_call_controller.rb)
-
-### Verify
-
-Tutorial                  | Code Sample
-------------------------- | -----------
-Two-Factor Authentication | TBD
+Tutorial                                                          | Code Sample
+----------------------------------------------------------------- | --------------------------------------------------------------------------------------------
+[How to Make an Outbound Text-to-Speech Phone Call with Rails](#) | [outbound_calls_controller.rb](app/controllers/outbound_calls_controller.rb)
+[How to receive an Call Event webhook with Ruby on Rails](#)      | [outbound_call_webhooks_controller.rb](app/controllers/outbound_call_webhooks_controller.rb)
+[How to Handle Inbound Phone Calls with Ruby on Rails](#)         | [inbound_call_controller.rb](app/controllers/inbound_call_controller.rb)
 
 ## Request More Examples
 

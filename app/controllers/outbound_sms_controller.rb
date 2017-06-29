@@ -15,7 +15,7 @@ class OutboundSmsController < ApplicationController
       redirect_to :outbound_sms, notice: 'SMS Sent'
     else
       flash[:alert] = 'Something went wrong'
-      render :show
+      render :index
     end
   end
 

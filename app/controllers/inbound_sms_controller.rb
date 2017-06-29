@@ -13,7 +13,9 @@ class InboundSmsController < ApplicationController
       # MSISDN in this webhook
       from: params[:msisdn],
       text: params[:text],
-      message_id: params[:messageId]
+      message_id: params[:messageId],
+      # Seperate inbound SMS from outbound ones
+      is_inbound: true
     )
 
     # Return an empty HTTP 200 status regardless

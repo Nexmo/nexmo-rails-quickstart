@@ -1,0 +1,19 @@
+<h1>Make a SMS</h1>
+
+<%= form_for @call, url: :outbound_calls do |f| %>
+  <div class="field">
+    <%= f.label :from, "Your Nexmo phone number to make the call from" %>
+    <%= f.text_field :from, placeholder: '+12223334555' %>
+  </div>
+  <div class="field">
+    <%= f.label :to, "Recipient's phone number or name" %>
+    <%= f.text_field :to, placeholder: '+12223334555' %>
+  </div>
+  <div class="field">
+    <%= f.label :text, "Voice message" %>
+    <%= f.text_area :text %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Send" %>
+  </div>
+<% end %>
