@@ -10,8 +10,12 @@ class CallEventsController < ApplicationController
       Call.where(uuid: params[:uuid])
           .first_or_create
           .update(
+            # Update the status of the call
             status: params[:status],
+            # Update the conversation ID
             conversation_uuid: params[:conversation_uuid],
+            # Additionally, check if the call was inbound,
+            # and if so mark it as such
             is_inbound: (params[:direction] == 'inbound')
           )
     end

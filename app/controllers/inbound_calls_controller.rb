@@ -8,18 +8,19 @@ class InboundCallsController < ApplicationController
     # Creates a new Call record in
     # the database
     Call.where(conversation_uuid: params[:conversation_uuid])
+        # If a call event has already come in on call_events#create then
+        # don't create a new call, unstead use the one we already have
         .first_or_create
+        # Storing these details is not really necessary to make the call
+        # but it's useful for keeping track what calls have been made
         .update_attributes(
-          # The Nexmo number this call was made to
+          # Update to store the Nexmo number this call was made to
           to: params[:to],
-          # The number that made the call
+          # Also update the number that made the call
           from: params[:from]
         )
 
-    puts params[:from].inspect
-
-
-    # Return an message for the caller
+    # Return an message to play back to the caller
     render json: [
       {
         action: 'talk',
