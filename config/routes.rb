@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resource :sms, only: [:show, :create]
-  resources :delivery_receipts, only: [:create]
+  resource :outbound_sms, only: [:show, :create]
+  resources :sms_delivery_receipts, only: [:create]
 end

@@ -1,6 +1,6 @@
 <h1>Send an SMS</h1>
 
-<%= form_for @sms, url: :sms do |f| %>
+<%= form_for @sms, url: :outbound_sms do |f| %>
   <div class="field">
     <%= f.label :from, "Sender's phone number or name" %>
     <%= f.text_field :from, placeholder: '+12223334555 or "John"' %>

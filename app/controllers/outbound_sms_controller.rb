@@ -1,4 +1,4 @@
-class SmsController < ApplicationController
+class OutboundSmsController < ApplicationController
 
   # Shows the UI for sending an SMS
   def show
@@ -12,7 +12,7 @@ class SmsController < ApplicationController
 
     if @sms.save
       deliver @sms
-      redirect_to :sms, notice: 'SMS Sent'
+      redirect_to :outbound_sms, notice: 'SMS Sent'
     else
       flash[:alert] = 'Something went wrong'
       render :show

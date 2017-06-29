@@ -1,4 +1,4 @@
-class DeliveryReceiptsController < ApplicationController
+class SmsDeliveryReceiptsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   # Updates an SMS message's status when a valid
