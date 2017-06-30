@@ -23,8 +23,8 @@ Tutorial                                                                        
 Tutorial                                                                                                                                                           | Code Sample
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------
 [How to Make an Outbound Text-to-Speech Phone Call with Rails](https://github.com/workbetta/nexmo-rails-quickstart-tutorials/tree/master/calls-make-outbound.md)   | [outbound_calls_controller.rb](app/controllers/outbound_calls_controller.rb)
-[How to Handle Inbound Phone Calls with Ruby on Rails](https://github.com/workbetta/nexmo-rails-quickstart-tutorials/tree/master/calls-receive-inbound.md)         | [inbound_calls_controller.rb](app/controllers/inbound_calls_controller.rb)
 [How to receive an Call Event webhook with Ruby on Rails](https://github.com/workbetta/nexmo-rails-quickstart-tutorials/tree/master/calls-receive-event-update.md) | [call_events_controller.rb](app/controllers/call_events_controller.rb)
+[How to Handle Inbound Phone Calls with Ruby on Rails](https://github.com/workbetta/nexmo-rails-quickstart-tutorials/tree/master/calls-receive-inbound.md)         | [inbound_calls_controller.rb](app/controllers/inbound_calls_controller.rb)
 
 ## Request More Examples
 
