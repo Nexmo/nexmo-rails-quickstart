@@ -8,6 +8,16 @@ To use this sample you will first need a [Nexmo account](https://dashboard.nexmo
 
 For some of the examples you will need to [buy a number](https://dashboard.nexmo.com/buy-numbers).
 
+## Setup
+
+$ git clone git@github.com:Nexmo/nexmo-rails-quickstart.git
+$ cd nexmo-rails-quickstart
+$ cp .env.example .env
+$ bundle install
+$ rake db:create
+$ rake db:migrate
+$ rails server
+
 ## Tutorials & Sample Code
 
 ### SMS
