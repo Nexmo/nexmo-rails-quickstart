@@ -10,6 +10,7 @@ For some of the examples you will need to [buy a number](https://dashboard.nexmo
 
 ## Setup
 
+```
 $ git clone git@github.com:Nexmo/nexmo-rails-quickstart.git
 $ cd nexmo-rails-quickstart
 $ cp .env.example .env
@@ -17,6 +18,7 @@ $ bundle install
 $ rake db:create
 $ rake db:migrate
 $ rails server
+```
 
 ## Tutorials & Sample Code
 
