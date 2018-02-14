@@ -38,7 +38,7 @@ class InboundSmsController < ApplicationController
   # Uses the Nexmo API to send a quick reply to the SMS received
   # for simplicity we're not storing this one in the database
   def reply sms
-    nexmo.send_message(
+    nexmo.sms.send(
       from: sms.to,
       to: sms.from,
       text: sms.text.reverse

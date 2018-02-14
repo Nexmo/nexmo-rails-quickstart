@@ -38,7 +38,7 @@ class OutboundSmsController < ApplicationController
   # Uses the Nexmo API to send the stored
   # SMS message
   def deliver sms
-    response = nexmo.send_message(
+    response = nexmo.sms.send(
       from: sms.from,
       to: sms.to,
       text: sms.text
@@ -46,9 +46,9 @@ class OutboundSmsController < ApplicationController
 
     # If sending the SMS was a success then store
     # the message ID on the SMS record
-    if response['messages'].first['status'] == '0'
+    if response.messages.first.status == '0'
       sms.update_attributes(
-        message_id: response['messages'].first['message-id']
+        message_id: response.messages.first.message_id
       )
     end
   end

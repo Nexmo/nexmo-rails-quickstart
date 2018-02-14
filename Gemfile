@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # The Nexmo gem for making API calls
-gem 'nexmo'
+gem 'nexmo', '~> 5'
 # Gem for loading environment variables
 gem 'dotenv-rails', groups: [:development, :test]
 

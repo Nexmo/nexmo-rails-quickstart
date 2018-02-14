@@ -79,13 +79,13 @@ class OutboundCallsController < ApplicationController
         outbound_call_url(call, host: ENV['NEXMO_SERVER_HOSTNAME'], port: 80)
       ]
     }
-    response = nexmo.create_call(options)
+    response = nexmo.calls.create(options)
 
     # If the call was successfully started,
     # update the status for this call
     call.update_attributes(
-      uuid: response['uuid'],
-      status: response['status']
-    ) if response['status'] && response['uuid']
+      uuid: response.uuid,
+      status: response.status
+    ) if response.status && response.uuid
   end
 end
