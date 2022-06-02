@@ -8,7 +8,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 # Below: standard Rails gems
 gem 'rails', '~> 5.2'
 gem 'sqlite3'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 4.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
